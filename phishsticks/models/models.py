@@ -160,7 +160,7 @@ db.create_all(app=app)
 if not Operator.query.filter(Operator.username == "admin").first():
     alphabet = string.ascii_uppercase + string.ascii_lowercase + string.digits
     # password = "".join(secrets.choice(alphabet) for i in range(16))
-    password = admin
+    password = "admin"
     default_operator = Operator(
         username="admin",
         password_hash=generate_password_hash(
