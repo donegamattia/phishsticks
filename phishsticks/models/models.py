@@ -168,11 +168,11 @@ if not Operator.query.filter(Operator.username == "admin").first():
     )
     db.session.add(default_operator)
     db.session.commit()
-print("---------------------------")
-print("---Default login details---")
-print("---------------------------")
-print(f"Username: admin\nPassword: {password}")
-print("---------------------------")
+    print("---------------------------")
+    print("---Default login details---")
+    print("---------------------------")
+    print(f"Username: admin\nPassword: {password}")
+    print("---------------------------")
 
 
 # Create default devicetoken config
