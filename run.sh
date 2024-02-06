@@ -14,13 +14,13 @@ create_cert () {
             -subj '/C=NA/ST=NA/L=NA/O=Phish/OU=Phisher/CN=phishsticks.internal'
 }
 
-CERT=cert.pem
-KEY=key.pem
-if [[ ! -f "$CERT" || ! -f "$KEY" ]]; then
-    rm cert.pem > /dev/null 2>&1
-    rm key.pem > /dev/null 2>&1
-    create_cert
-fi
+#CERT=cert.pem
+#KEY=key.pem
+#if [[ ! -f "$CERT" || ! -f "$KEY" ]]; then
+    #rm cert.pem > /dev/null 2>&1
+    #rm key.pem > /dev/null 2>&1
+    #create_cert
+#fi
 
 
 flask run --host=0.0.0.0 --port=8888 
